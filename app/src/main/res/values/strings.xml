@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">LiveScore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="hint_enter_your_email">Enter your email</string>
+    <string name="text_forgot_password">Forgot password?</string>
+    <string name="password">Password</string>
+    <string name="hint_enter_your_password">Enter your password</string>
+    <string name="button_log_in">Log In</string>
+    <string name="welcome">Welcome, %s</string>
+    <string name="don_t_have_an_account_create_account">Don`t have an account. Create account</string>
+    <string name="how_are_you_today">How are you today?</string>
+    <string name="hint_search">Search…</string>
+    <string name="matches_today">Live streams now</string>
+    <string name="sign_up">Sign up</string>
+    <string name="name">Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="have_an_account">Have an account</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="show_what_a_sports_enthusiast_you_are">Show what a sports enthusiast you are!</string>
+    <string name="get_started_to_make_a_new_play_buddy">Get started to make a new play buddy!</string>
+    <string name="join_games">Join Games</string>
+    <string name="watch_your_favourite_matches_live_and_recharge_your_batteries">Watch your favourite matches live and recharge your batteries</string>
+    <string name="name_profile_fragment">Name :</string>
+    <string name="email_profile_fragment">Email :</string>
+    <string name="exit">Exit</string>
+    <string name="reset">Reset</string>
+    <string name="reset_the_password">Reset the password</string>
+    <string name="succesfull_login">Login successful.</string>
+    <string name="wrong_login_or_password">Wrong login or password.</string>
+    <string name="email_already_registered">This email is already registered.</string>
+    <string name="invalid_email">Invalid email.</string>
+    <string name="invalid_password">Invalid password.</string>
+    <string name="succesfull_singup">Successful registration.</string>
+    <string name="less_characters">Less than 6 characters.</string>
+    <string name="invalid_email_or_already_registered">Invalid email or already registered.</string>
+    <string name="the_field_is_empty">The field is empty.</string>
+    <string name="exit_toast">Exit.</string>
+</resources>

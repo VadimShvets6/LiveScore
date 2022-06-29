@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "824812769935",
+    "project_id": "footballlive-5e009",
+    "storage_bucket": "footballlive-5e009.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824812769935:android:b38c7c5d73e674bec896fa",
+        "android_client_info": {
+          "package_name": "com.top1shvetsvadim1.footballivestream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824812769935-kab7m4cu9jteh1tcn5vp0rpj9hfvhcp2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.top1shvetsvadim1.footballivestream",
+            "certificate_hash": "ef1c421c88013883c93fe097a76fa6661d6935a9"
+          }
+        },
+        {
+          "client_id": "824812769935-mqaqd9oe7r842smv4giigupkgsqsd0qv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACdckuuv-xUQuSsG3lY3qV_QQDTf-D_30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824812769935-mqaqd9oe7r842smv4giigupkgsqsd0qv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
