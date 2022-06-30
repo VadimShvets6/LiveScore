@@ -1,4 +1,4 @@
-package com.top1shvetsvadim1.footballivestream.presentation.fragment.register
+package com.top1shvetsvadim1.footballivestream.presentation.fragment.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,17 +11,17 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.top1shvetsvadim1.footballivestream.R
-import com.top1shvetsvadim1.footballivestream.databinding.FragmentRegisterBinding
-import com.top1shvetsvadim1.footballivestream.databinding.FragmentResetPasswordBinding
+import com.top1shvetsvadim1.footballivestream.databinding.FragmentResetPasswordFromProfileBinding
 import com.top1shvetsvadim1.footballivestream.presentation.ResetPassword
+import com.top1shvetsvadim1.footballivestream.presentation.fragment.matchInfo.MatchMainFragment
+import com.top1shvetsvadim1.footballivestream.presentation.fragment.register.LogInFragment
 import com.top1shvetsvadim1.footballivestream.presentation.viewModel.RegisterViewModel
-import java.lang.RuntimeException
 
-class ResetPasswordFragment : Fragment() {
 
-    private var _binding: FragmentResetPasswordBinding? = null
-    private val binding: FragmentResetPasswordBinding
-        get() = _binding ?: throw RuntimeException("FragmentResetPasswordBinding == null")
+class ResetPasswordFromProfileFragment : Fragment() {
+    private var _binding: FragmentResetPasswordFromProfileBinding? = null
+    private val binding: FragmentResetPasswordFromProfileBinding
+        get() = _binding ?: throw RuntimeException("FragmentResetPasswordFromProfileBinding == null")
 
 
     private val viewModel by lazy {
@@ -32,7 +32,7 @@ class ResetPasswordFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentResetPasswordBinding.inflate(inflater, container, false)
+        _binding = FragmentResetPasswordFromProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -46,8 +46,7 @@ class ResetPasswordFragment : Fragment() {
     private fun onClickListeners() {
         binding.buttonBack.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().replace(
-                R.id.fragment_container_main_activity,
-                LogInFragment.newInstance()
+                R.id.fragment_container_info_activity, MatchMainFragment.newInstance()
             ).commit()
         }
         binding.buttonReset.setOnClickListener {
@@ -93,10 +92,9 @@ class ResetPasswordFragment : Fragment() {
     private fun myOnBackPressed() {
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                   requireActivity().supportFragmentManager.beginTransaction().replace(
-                       R.id.fragment_container_main_activity,
-                       LogInFragment.newInstance()
-                   ).commit()
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container_info_activity, ProfileUserFragment.newInstance())
+                    .commit()
             }
         }
         activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, callback)
@@ -105,6 +103,6 @@ class ResetPasswordFragment : Fragment() {
     companion object {
 
         @JvmStatic
-        fun newInstance() = ResetPasswordFragment()
+        fun newInstance() = ResetPasswordFromProfileFragment()
     }
 }

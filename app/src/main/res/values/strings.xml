@@ -7,6 +7,9 @@
     <string name="hint_enter_your_email">Enter your email</string>
     <string name="text_forgot_password">Forgot password?</string>
     <string name="password">Password</string>
+    <string name="menu_live_streams">Live streams</string>
+    <string name="menu_live_score">Live score</string>
+    <string name="menu_profile">Profile</string>
     <string name="hint_enter_your_password">Enter your password</string>
     <string name="button_log_in">Log In</string>
     <string name="welcome">Welcome, %s</string>
@@ -20,7 +23,7 @@
     <string name="have_an_account">Have an account</string>
     <string name="create_profile">Create Profile</string>
     <string name="show_what_a_sports_enthusiast_you_are">Show what a sports enthusiast you are!</string>
-    <string name="get_started_to_make_a_new_play_buddy">Get started to make a new play buddy!</string>
+    <string name="get_started_to_make_a_new_play_buddy">Start watching your favourite matches right now!</string>
     <string name="join_games">Join Games</string>
     <string name="watch_your_favourite_matches_live_and_recharge_your_batteries">Watch your favourite matches live and recharge your batteries</string>
     <string name="name_profile_fragment">Name :</string>
@@ -38,4 +41,10 @@
     <string name="invalid_email_or_already_registered">Invalid email or already registered.</string>
     <string name="the_field_is_empty">The field is empty.</string>
     <string name="exit_toast">Exit.</string>
+    <string name="title_activity_info_test">InfoActivityTest</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="change_email_address">Change email address</string>
+    <string name="change_password">Change password</string>
 </resources>

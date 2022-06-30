@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -17,7 +18,10 @@ import com.google.firebase.ktx.Firebase
 import com.top1shvetsvadim1.footballivestream.R
 import com.top1shvetsvadim1.footballivestream.databinding.FragmentProfileUserBinding
 import com.top1shvetsvadim1.footballivestream.domain.RegisterAndLogIn.User
+import com.top1shvetsvadim1.footballivestream.presentation.activity.InfoActivity
 import com.top1shvetsvadim1.footballivestream.presentation.activity.RegisterActivity
+import com.top1shvetsvadim1.footballivestream.presentation.fragment.matchInfo.MatchMainFragment
+import com.top1shvetsvadim1.footballivestream.presentation.fragment.register.ResetPasswordFragment
 
 
 class ProfileUserFragment : Fragment() {
@@ -38,6 +42,11 @@ class ProfileUserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         userDate()
+        binding.tvChangePassword.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container_info_activity, ResetPasswordFromProfileFragment.newInstance())
+                .commit()
+        }
     }
 
     private fun userDate() {
@@ -51,14 +60,18 @@ class ProfileUserFragment : Fragment() {
                     binding.tvNameProfile.text = userProfile.name
                     binding.tvEmailProfile.text = userProfile.email
                     binding.tvExit.setOnClickListener {
-                        Toast.makeText(requireContext(), getString(R.string.exit_toast), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            requireContext(),
+                            getString(R.string.exit_toast),
+                            Toast.LENGTH_SHORT
+                        ).show()
                         Firebase.auth.signOut()
                         Intent(requireContext(), RegisterActivity::class.java).apply {
                             startActivity(this)
                         }
                     }
                     binding.innerToolbarMenu.setNavigationOnClickListener {
-                        requireActivity().supportFragmentManager.popBackStack("Match", 0)
+                        requireActivity().supportFragmentManager.popBackStack()
                     }
                 }
             }
@@ -68,6 +81,8 @@ class ProfileUserFragment : Fragment() {
             }
         })
     }
+
+
 
     companion object {
 

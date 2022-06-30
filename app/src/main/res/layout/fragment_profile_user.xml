@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:backgroundTint="@color/white"
+    android:background="@color/main_bg_color"
+    android:backgroundTint="@color/main_bg_color"
     tools:context=".presentation.fragment.profile.ProfileUserFragment">
 
 
@@ -35,7 +35,9 @@
         android:layout_height="80dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:src="@drawable/ball_icon"
+        app:tint="@color/white"
+        android:elevation="10dp"
+        android:src="@drawable/illustration"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbarMenu" />
 
@@ -47,7 +49,7 @@
         android:layout_marginStart="32dp"
         android:fontFamily="@font/inter_black"
         android:text="@string/name_profile_fragment"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/ivLogoProfile"
         app:layout_constraintTop_toTopOf="@id/ivLogoProfile" />
@@ -60,7 +62,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/inter_black"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +79,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/inter_black"
         android:text="@string/email_profile_fragment"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/ivLogoProfile"
         app:layout_constraintTop_toBottomOf="@id/tvLabelNameProfile" />
@@ -92,7 +94,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:singleLine="true"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,29 +112,97 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline3">
 
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_door"
-            app:tint="@color/black" />
-
-        <TextView
-            android:id="@+id/tvExit"
+        <LinearLayout
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="8dp"
-            android:fontFamily="@font/inter"
-            android:text="@string/exit"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_security_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/change_password"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_email_24" />
+
+            <TextView
+                android:id="@+id/tvChangeEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/change_email_address"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_door"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvExit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/exit"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 
